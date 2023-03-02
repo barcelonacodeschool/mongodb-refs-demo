@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "6f3bf3d3-cdd1-4b6b-9f01-4d8d1a2969ee",
+		"name": "DB Models Refs Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add language",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "language",
+							"value": "Japanese",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/languages/new",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"languages",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get languages",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "language",
+							"value": "Japanese",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/languages/",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"languages",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single language",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "language",
+							"value": "Japanese",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/languages/6400873a7adff5def7484fe8",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"languages",
+						"6400873a7adff5def7484fe8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete language",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "language",
+							"value": "Japanese",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/languages/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"languages",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update language",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "language",
+							"value": "Chinese",
+							"type": "text"
+						},
+						{
+							"key": "newLanguage",
+							"value": "Cantonese",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/languages/update",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"languages",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a word with reference to language",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "lang_id",
+							"value": "64008a4b03c39f62332372ab",
+							"type": "text"
+						},
+						{
+							"key": "word",
+							"value": "Hello",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/words/new",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"words",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all words and replace id of language to it's value",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "lang_id",
+							"value": "64008a4b03c39f62332372ab",
+							"type": "text"
+						},
+						{
+							"key": "word",
+							"value": "Hello",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/words/",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"words",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
