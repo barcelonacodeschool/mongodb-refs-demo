@@ -2,7 +2,7 @@
 
 ## Install and run:
 1. git clone this repo
-2. `npm i` to install teh packages
+2. `npm i` to install the packages
 3. `nodemon` to start the server
 
 
