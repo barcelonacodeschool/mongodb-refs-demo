@@ -1,6 +1,14 @@
-## Languages:
+# Using references across mongoDB collection demo
 
-# Add new language
+## Install and run:
+1. git clone this repo
+2. `npm i` to install teh packages
+3. `nodemon` to start the server
+
+
+## Working with languages:
+
+### Add new language
 URL: localhost:4000/languages/new
 Type of request: POST
 Body: {language:'Japanese'}
@@ -17,7 +25,7 @@ Response:
 }
 ```
 
-# See all languages
+### See all languages
 URL: localhost:4000/languages/
 Type of request: GET
 
@@ -40,7 +48,7 @@ Response:
 }
 ```
 
-# Get one language
+### Get one language
 URL: localhost:4000/languages/6400873a7adff5def7484fe8
 Type of request: GET
 
@@ -57,7 +65,7 @@ Response:
 ```
 
 
-# Delete a language
+### Delete a language
 URL: localhost:4000/languages/delete
 Type of request: POST
 Body: {language:'Japanese'}
@@ -74,7 +82,7 @@ Response:
 ```
 
 
-# Update a language
+### Update a language
 URL: localhost:4000/languages/update
 Type of request: POST
 Body: {language:'Chinese', newLanguage:'Cantonese'}
@@ -100,7 +108,9 @@ However, with the words it will be different, since every word will have not jus
 Let's create English and Japanese languages in the languages collection and add some words which will be referencing them. 
 
 
-# Add a word
+## Working with words:
+
+### Add a word
 URL: localhost:4000/words/new
 Type of request: POST
 Body: {word:'Hello', lang_id:'64008a4b03c39f62332372ab'}
@@ -121,7 +131,7 @@ Response:
 As you can see, to create a new word we pass the word itself and the `_id` of a language we want it to refer to. This `_id` was assigned when we added a language into the languages collection. 
 
 
-# See all words
+### See all words
 URL: localhost:4000/words/
 Type of request: GET
 
