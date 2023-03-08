@@ -27,6 +27,19 @@ class WordsController {
 			res.send({ok:false, data:e})
 		}
 	}
+
+	async deleteWord(req,res){
+		let {word_id}=req.body
+		try{
+			const word_deleted = await Words.findByIdAndDelete(word_id)
+			res.send({ok:true,data:word_deleted})
+		}
+		catch(e){
+			res.send({ok:false, data:e})
+		}
+	}
+
+
 }
 
 module.exports = new WordsController()
